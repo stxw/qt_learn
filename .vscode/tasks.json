@@ -1,0 +1,17 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "qt_build_debug",
+            "command": "qmake",
+            "args": [
+                "${file}", "CONFIG+=debug", "CONFIG+=qml_debug", 
+                "&&", "make"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
