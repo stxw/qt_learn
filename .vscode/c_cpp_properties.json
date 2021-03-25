@@ -4,7 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/home/stxw/programs/anaconda3/include/qt/**"
+                "/home/stxw/program/anaconda3/include/qt/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/g++",
