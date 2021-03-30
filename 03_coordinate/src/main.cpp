@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	button.setText("Button");
 	button.setParent(&widget);
 
-	/* 设置button的相对父窗口的坐标ax,ay，已经button的宽度aw和高度ah */
+	/* 设置button的相对父窗口的坐标ax,ay，以及button的宽度aw和高度ah */
 	button.setGeometry(30, 30, 200, 100);
 
 	widget.show();

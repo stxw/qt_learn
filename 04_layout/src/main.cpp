@@ -12,9 +12,11 @@
 #include <QWidget>
 #include <QPushButton>
 #include <QLineEdit>
+#include <QLabel>
 
 #include <QVBoxLayout> /* 垂直布局 */
 #include <QHBoxLayout> /* 水平布局 */
+#include <QGridLayout> /* 格子布局 */
 
 int main(int argc, char *argv[])
 {
@@ -41,8 +43,44 @@ int main(int argc, char *argv[])
 	widget.setLayout(&layout);
 #endif
 
+#if 0
 	QGridLayout layout;
+	layout.setRowStretch(0, 1);
+	layout.setColumnStretch(0, 1);
 
+	layout.addWidget(&button, 1, 1);
+	layout.addWidget(&line_edit, 1, 2, 2, 1);
+	layout.addWidget(new QPushButton("1,0"), 2, 1);
+	layout.addWidget(new QPushButton("aaa"), 3, 1, 1, 2);
+
+	layout.setRowStretch(4, 1);
+	layout.setColumnStretch(3, 1);
+
+	widget.setLayout(&layout);
+#endif
+
+#if 1
+	QGridLayout layout;
+	layout.setRowStretch(0, 1);
+	layout.setColumnStretch(0, 1);
+
+	// layout.addWidget(new QLabel("用户名："), 1, 1);
+	// layout.addWidget(new QLineEdit(), 1, 2);
+	// layout.addWidget(new QLabel("密码："), 2, 1);
+	// QLineEdit *passwd_edit = new QLineEdit();
+	// layout.addWidget(passwd_edit, 2, 2);
+	// passwd_edit->setEchoMode(QLineEdit::Password);
+
+	QHBoxLayout hbox;
+	hbox.addStretch(1);
+	hbox.addWidget(new QPushButton("登录"));
+	layout.addLayout(&hbox, 3, 1, 1, 2);
+
+	layout.setRowStretch(4, 1);
+	layout.setColumnStretch(3, 1);
+
+	widget.setLayout(&layout);
+#endif
 
 	widget.show();
 	return app.exec();
