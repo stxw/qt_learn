@@ -64,12 +64,12 @@ int main(int argc, char *argv[])
 	layout.setRowStretch(0, 1);
 	layout.setColumnStretch(0, 1);
 
-	// layout.addWidget(new QLabel("用户名："), 1, 1);
-	// layout.addWidget(new QLineEdit(), 1, 2);
-	// layout.addWidget(new QLabel("密码："), 2, 1);
-	// QLineEdit *passwd_edit = new QLineEdit();
-	// layout.addWidget(passwd_edit, 2, 2);
-	// passwd_edit->setEchoMode(QLineEdit::Password);
+	layout.addWidget(new QLabel("用户名："), 1, 1);
+	layout.addWidget(new QLineEdit(), 1, 2);
+	layout.addWidget(new QLabel("密码："), 2, 1);
+	QLineEdit *passwd_edit = new QLineEdit();
+	layout.addWidget(passwd_edit, 2, 2);
+	passwd_edit->setEchoMode(QLineEdit::Password);
 
 	QHBoxLayout hbox;
 	hbox.addStretch(1);

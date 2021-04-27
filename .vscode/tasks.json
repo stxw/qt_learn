@@ -3,7 +3,7 @@
         {
             "type": "shell",
             "label": "qt_build_debug",
-            "command": "qmake",
+            "command": "/home/stxw/program/anaconda3/bin/qmake",
             "args": [
                 "${file}", "CONFIG+=debug", "CONFIG+=qml_debug", 
                 "&&", "make"
